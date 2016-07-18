@@ -246,7 +246,7 @@ function receivedMessage(event) {
   var messageAttachments = message.attachments;
   var quickReply = message.quick_reply;
   
-  sendTextMessage(senderID, "Echo: " + event.message.text);
+  //sendTextMessage(senderID, "Echo: " + event.message.text);
   
   if (isEcho) {
     // Just logging message echoes to console
