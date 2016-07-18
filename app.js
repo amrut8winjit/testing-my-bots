@@ -60,7 +60,7 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
  * Use your own validation token. Check that the token used in the Webhook 
  * setup is the same token used here.
  *
- */
+ 
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === VALIDATION_TOKEN) {
@@ -71,7 +71,18 @@ app.get('/webhook', function(req, res) {
     res.sendStatus(403);          
   }  
 });
-
+*/
+// handler receiving messages
+app.post('/webhook', function (req, res) {
+    var events = req.body.entry[0].messaging;
+    for (i = 0; i < events.length; i++) {
+        var event = events[i];
+        if (event.message && event.message.text) {
+            sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
+        }
+    }
+    res.sendStatus(200);
+});
 
 /*
  * All callbacks for Messenger are POST-ed. They will be sent to the same
