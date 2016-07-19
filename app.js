@@ -269,59 +269,84 @@ function receivedMessage(event) {
     // the text we received.
     switch (messageText) {
       case 'image':
+      case 'Image':
         sendImageMessage(senderID);
         break;
 
       case 'gif':
+      case 'Gif':
+      case 'GIF':
         sendGifMessage(senderID);
         break;
 
       case 'audio':
+       case 'Audio':
         sendAudioMessage(senderID);
         break;
 
       case 'video':
+      case 'Video':
         sendVideoMessage(senderID);
         break;
 
       case 'file':
+      case 'File':
         sendFileMessage(senderID);
         break;
 
       case 'button':
+      case 'Button':
         sendButtonMessage(senderID);
         break;
 
       case 'generic':
+      case 'Generic':
         sendGenericMessage(senderID);
         break;
 
       case 'receipt':
+      case 'Receipt':
         sendReceiptMessage(senderID);
         break;
 
       case 'quick reply':
+      case 'Quick Reply':
         sendQuickReply(senderID);
         break;        
 
       case 'read receipt':
+      case 'Read Receipt':
         sendReadReceipt(senderID);
         break;        
 
       case 'typing on':
+      case 'Typing ON':
         sendTypingOn(senderID);
         break;        
 
       case 'typing off':
+      case 'Typing OFF':
         sendTypingOff(senderID);
         break;        
 
       case 'account linking':
+      case 'Account Linking':
         sendAccountLinking(senderID);
         break;
 
+      case 'help':
+      case 'Help':
+        sendTextMessage(senderID, "More options coming soon...");
+      break;
+
+      case 'hi':
+      case 'Hi':
+      case 'hello':
+      case 'Hello':
+        sendTextMessage(senderID, "Hello, let us know we help you. Type 'help' for more options");
+        break;
       default:
-        sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "We cannot understand what you mean by '"+messageText+"'. Type 'help' for more options.");
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
