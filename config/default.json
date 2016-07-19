@@ -1,6 +1,6 @@
 {
-    "appSecret": "cdea5a7c2a63409bc61305de3a81822f",
-    "pageAccessToken": "EAAXGAP8Gf7YBAOI5EvIpBQp6AspsZAZCY1nLjxJZCx3zX4lF2K18a19BY1hTvARYsb1KwrACr1caqHKkORP55yZCqvqwZCkNzUOgVKYD1OD2Lr3PoX83wZC4mcWsaIhHRvLg31Y9qCCc9ESGum9UL3aOz0zZA6SVdaTLoPbcu2siAZDZD",
+    "appSecret": "19f011803237d78183ffeca5825e4214",
+    "pageAccessToken": "EAAPCZBNuGq5UBAIsCqQ5ak18mtAUZBkMxokyhkdVuIQmk2ZA9VmywYhNpzXlNUpwRTIzZBXvo3gXm4vZC8BALuX4y825xLH2jn7NhqiyLZChUikxZAHmhNNaQELXlI7kFDzIKfMajODExjp3dGPvxUpE0EbPlNAtm015H9py9bDgQZDZD",
     "validationToken": "verify_token",
     "serverURL": "https://test-bot-integration-sample.herokuapp.com/"
 }
