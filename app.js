@@ -72,7 +72,18 @@ app.get('/webhook', function(req, res) {
   }  
 });
 
-
+// handler receiving messages
+/*app.post('/webhook', function (req, res) {
+    var events = req.body.entry[0].messaging;
+    for (i = 0; i < events.length; i++) {
+        var event = events[i];
+        if (event.message && event.message.text) {
+            sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
+        }
+    }
+    res.sendStatus(200);
+});
+*/
 /*
  * All callbacks for Messenger are POST-ed. They will be sent to the same
  * webhook. Be sure to subscribe your app to your page to receive callbacks
@@ -234,7 +245,9 @@ function receivedMessage(event) {
   var messageText = message.text;
   var messageAttachments = message.attachments;
   var quickReply = message.quick_reply;
-
+  
+  //sendTextMessage(senderID, "Echo: " + event.message.text);
+  
   if (isEcho) {
     // Just logging message echoes to console
     console.log("Received echo for message %s and app %d with metadata %s", 
