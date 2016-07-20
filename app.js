@@ -346,7 +346,7 @@ function receivedMessage(event) {
       case 'Hi':
       case 'hello':
       case 'Hello':
-        sendTextMessage(senderID, "Hello user, welcome to this new world of chat bots. Please let us know how we help you. Type 'help' for more options");
+        sendTextMessage(senderID, "Hello user, welcome to this new world of chat bots. Please let us know how we can help you. Type 'help' for more options");
         break;
       default:
         sendTextMessage(senderID, "Hello user, we cannot understand what you mean by '"+messageText+"'. Type 'help' for more options.");
