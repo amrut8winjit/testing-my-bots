@@ -336,17 +336,17 @@ function receivedMessage(event) {
 
       case 'help':
       case 'Help':
-        sendTextMessage(senderID, "More options coming soon...");
+        sendTextMessage(senderID, "1. Type 'Image' - to get an Image \n 2. Type 'Gif' - to get a Gif image \n 3. Type 'Audio' - to get an Audio \n More options coming soon...");
       break;
 
       case 'hi':
       case 'Hi':
       case 'hello':
       case 'Hello':
-        sendTextMessage(senderID, "Hello, let us know we help you. Type 'help' for more options");
+        sendTextMessage(senderID, "Hello user, welcome to this new world of chat bots. Please let us know how we help you. Type 'help' for more options");
         break;
       default:
-        sendTextMessage(senderID, "We cannot understand what you mean by '"+messageText+"'. Type 'help' for more options.");
+        sendTextMessage(senderID, "Hello user, we cannot understand what you mean by '"+messageText+"'. Type 'help' for more options.");
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
