@@ -338,7 +338,8 @@ function receivedMessage(event) {
       case 'Help':
         sendTextMessage(senderID, "1. Type 'Image' - to get an Image message \n 2. Type 'Gif' - to get a Gif image message \n 3. Type 'Audio' - to get an Audio message \n 4. Type 'Video' - to get a Video message");
         sendTextMessage(senderID, "5. Type 'File' - to get a File message \n 6. Type 'Button' - to get a Button message \n 7. Type 'Generic' - to get a Generic message \n 8. Type 'Receipt' - to get a Receipt message");
-        sendTextMessage(senderID, "9. Type 'Quick Reply' - to get a Quick Reply message \n 10. Type 'Read Receipt' - to get a Read Receipt message \n 11. Type 'Typing ON' - to show typing is ON \n 12. Type 'Typing OFF' - to show typing is OFF \n 13. Type 'Account Linking' - to do Account Linking \n We are coming with more options to serve you better.");
+        sendTextMessage(senderID, "9. Type 'Quick Reply' - to get a Quick Reply message \n 10. Type 'Read Receipt' - to get a Read Receipt message \n 11. Type 'Typing ON' - to show typing is ON \n 12. Type 'Typing OFF' - to show typing is OFF \n 13. Type 'Account Linking' - to do Account Linking");
+        sendTextMessage(senderID, "We are coming with more options to serve you better.");
       break;
 
       case 'hi':
